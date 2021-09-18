@@ -1,2 +1,1 @@
 # PraiseFellowshipSTL.github.io
-Welcome!
