@@ -11398,7 +11398,13 @@ header.masthead .content{
   color: #fff;
   width: 70%;
   margin-top: 50px;
+  display: none;
 }
+
+header.masthead .content.active{
+  display: block;
+}
+
 header.masthead .content h1{
   font-size: 4em;
   font-weight: 900;
@@ -11838,6 +11844,13 @@ header.masthead video{
     transition-property: clip-path;
   }
 }
+
+  .welcome-video{
+    height:inherit;
+    width: inherit;
+    object-position:center 50%;
+    z-index: -1;
+  }
 
 #portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
   max-width: 1920px;
