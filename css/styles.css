@@ -11846,8 +11846,8 @@ header.masthead video{
 }
 
   .welcome-video{
-    height:inherit;
-    width: inherit;
+    height:600px;
+    width: 400px;
     object-position:center 50%;
     z-index: -1;
   }
@@ -11886,4 +11886,18 @@ header.masthead video{
 }
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
+}
+
+.carousel-item{
+  height: 32rem;
+  background: #777;
+  color: white;
+  position: relative;
+}
+.carousel-container{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
 }
