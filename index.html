@@ -18,6 +18,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="/css/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -49,7 +50,25 @@
         </nav>
         <!-- Masthead-->
         <header class="masthead">
-            <video src="welcome.mp4" controls autoPlay></video>
+            <video class="video-slide active" src="worship-slider.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="sermon-slider.mp4" autoplay muted loop></video>
+            <div class="content hidden-mobile">
+              <h1>Sermon.<br><span>Sermon.</span></h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <a href="#">Read More</a>
+            </div>
+            <div class="media-icons hidden-mobile">
+              <a href="https://www.facebook.com/PraiseFellowshipAssembly"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.youtube.com/user/DocZemanek"><i class="fab fa-youtube"></i></a>
+            </div>
+            <!--<video class="video-slide" src="welcome.mp4" controls autoPlay></video>-->
+            <div class="slider-navigation hidden-mobile">
+                <div class="nav-btn active"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+            </div>
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
@@ -257,12 +276,6 @@
                     <div class="col-lg-4 text-center mb-5 mb-lg-0">
                         <i class="bi-phone fs-2 mb-3 text-muted"></i>
                         <div>(314) 919-5181</div>
-                        <a href="https://www.facebook.com/PraiseFellowshipAssembly" class="btn btn-social-icon btn-facebook">
-                          <span class="fa fa-facebook fa-2x"></span>
-                        </a>
-                        <a href="https://www.youtube.com/user/DocZemanek" class="btn btn-social-icon btn-youtube">
-                          <span class="fa fa-youtube fa-2x"></span>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -282,5 +295,28 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script type="text/javascript">
+          const btns = document.querySelectorAll(".nav-btn");
+          const slides = document.querySelectorAll(".video-slide");
+
+          var sliderNav = function(manual){
+            btns.forEach((btn) => {
+              btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) => {
+              slide.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+          }
+
+          btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+              sliderNav(i);
+            })
+          });
+        </script>
     </body>
 </html>
